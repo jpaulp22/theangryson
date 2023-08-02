@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "Maler";
+    src: url("../assets/fonts/Maler-Display-Font/Maler.ttf") format('truetype');
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Maler', sans-serif;
+    background-color: #f6f7eb;
+    color: #1b2122;
+}
+
+.container-fluid{
+    overflow: hidden;
+}
+
+#p5_loading{
+    visibility: hidden;
+}
+
+#loader{
+    background-color: #f6f7eb;
+}
+
+#loadingcanvas{
+    display: block;
+    opacity: 0;
+    animation: fade-in-out 3s ease-in forwards;
+    -webkit-animation: fade-in-out 3s ease-in forwards;
+}
+
+.background{
+    opacity: 0;
+    height: 100vh;
+    background: linear-gradient(90deg, rgb(246, 247, 235, .95) 0%, rgba(246, 247, 235, .95) 35%, rgba(246, 247, 235, .95) 100%), url('../assets/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 170%;
+    animation: main-fade-in 1s ease-in forwards;
+    -webkit-animation: main-fade-in 1s ease-in forwards;
+    animation-delay: 3s;
+}
+
+.navbar-nav:not(#second-nav), .btn{
+    font-size: 3rem;
+}
+
+.nav-link{
+    color: #1b2122;
+}
+
+.nav-link:hover{
+    color: #717769;
+}
+
+.btn{
+    padding: .5rem 0;
+    color: #1b2122;
+    vertical-align: middle;
+}
+
+.btn:focus{
+    box-shadow: none;
+}
+
+.btn-link{
+    text-decoration: none;
+}
+
+.btn-link:hover{
+    color: #717769;
+}
+
+#second-nav {
+    font-size: 2.2rem;
+    display: none;
+}
+
+@keyframes main-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-out{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media (min-width: 576px){
+    .background{
+        background-size: 100%;
+    }
+
+    .navbar-nav:not(#second-nav), .btn{
+        font-size: 4rem;
+    }
+
+    #second-nav{
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 992px){
+    .background{
+        background-size: contain;
+    }
+
+    .navbar-nav:not(#second-nav),.btn{
+        font-size: 4.4rem;
+    }
+
+    #second-nav{
+        font-size: 4.4rem;
+    }
+}

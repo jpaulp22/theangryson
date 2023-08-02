@@ -1,0 +1,16 @@
+footer hr{
+    opacity: 1;
+}
+
+footer hr:not([size]){
+    height: 2px;
+}
+
+.socials img{
+    width: 50px;
+    height: 50px;
+}
+
+#copyright-container{
+    color: #1b2122;
+}

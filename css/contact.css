@@ -1,0 +1,59 @@
+/*header*/
+.header{
+    height: 40vh;
+    background-color: #1b2122;
+    color: #f6f7eb;
+}
+
+/*container*/
+.heading-container{
+    border-bottom: #1b2122 1px solid;
+}
+
+/*form*/
+form{
+    width: 95%;
+}
+
+.form-control{
+    background-color: #f6f7eb;
+    color: #1b2122;
+    border-color: #717769;
+}
+
+.form-control:focus{
+    background-color: #f6f7eb;
+    color: #1b2122;
+    border-color: #1b2122;
+    box-shadow: 0 0 0 0.25rem #717769;
+}
+
+form button{
+    font-size: 1.3rem;
+    background-color: #1b2122;
+    color: #f6f7eb;
+    border: 0;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+form button:hover{
+    background-color: #717769;
+}
+
+.text-links{
+    background: linear-gradient(currentColor 0 0) bottom left /var(--d, 40%) 3px no-repeat;
+}
+
+@media (min-width: 992px){
+    .contact .row{
+        border-top: #1b2122 1px solid;
+    }
+
+    .contact .row > div:nth-child(2){
+        border-left: #1b2122 1px solid;
+    }
+}

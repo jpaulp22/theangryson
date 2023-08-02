@@ -1,0 +1,47 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/*header*/
+.header {
+    height: 40vh;
+    min-height: 280px;
+    background-color: #1b2122;
+    color: #f6f7eb;
+}
+
+.button-style {
+    background-color: #f6f7eb;
+    color: #1b2122;
+}
+
+/*projects*/
+.projects{
+    flex-grow: 1;
+}
+
+.projects img{
+    box-shadow: 3px 7px 47px -7px rgba(27, 33, 34, 0.75);
+    -webkit-box-shadow: 3px 7px 47px -7px rgba(27, 33, 34, 0.75);
+    -moz-box-shadow: 3px 7px 47px -7px rgba(27, 33, 34, 0.75);
+}
+
+@media (min-width: 768px) {
+    .header {
+        height: 40vh;
+        background-color: #1b2122;
+        color: #f6f7eb;
+    }
+}

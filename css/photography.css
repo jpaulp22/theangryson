@@ -1,0 +1,123 @@
+/*header*/
+.header{
+    height: 100vh;
+    min-height: 650px;
+    background-color: #1b2122;
+    color: #f6f7eb;
+}
+
+.noAnimbutton-style{
+    background-color: #f6f7eb;
+    color: #1b2122;
+}
+
+
+/*gallery*/
+#gallery{
+    scroll-margin-top: 50px;
+    scroll-snap-margin-top: 50px;
+}
+
+.prompt{
+    cursor: pointer;
+}
+
+.filter{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.prompt:hover .filter{
+    filter:grayscale(0);
+    -webkit-filter:grayscale(0);
+}
+
+.prompt h3{
+    color: #f6f7eb;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.travel-gal, .events-gal, .private-gal{
+    display: none;
+}
+
+.btn {
+    padding: .5rem 0;
+    color: #1b2122;
+    vertical-align: middle;
+    font-size: 3rem;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    color: #717769;
+}
+
+.button-style{
+    background-color: #f6f7eb;
+    color: #1b2122;
+}
+
+/*lightbox*/
+.lightbox {
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed !important;
+    top: 0 !important;
+}
+
+.lightboxOverlay{
+    background-color: #1b2122;
+}
+
+#lightboxOverlay {
+    height: 100% !important;
+    left: 0;
+    position: fixed !important;
+    top: 0;
+    width: 100% !important;
+}
+
+.lb-outerContainer {
+    margin: auto;
+    background-color: #f6f7eb;
+}
+
+.lb-image {
+    margin: auto;
+}
+
+.lb-close {
+    bottom: 100%;
+    position: fixed;
+    right: 3%;
+    top: 30px;
+}
+
+@media (min-width: 768px){
+    .header p, .header a{
+        font-size: 2.5rem;
+    }
+
+}

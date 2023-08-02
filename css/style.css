@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "BL Melody";
+    src: url("../assets/fonts/BL-Melody/BLMelody-Regular.woff2") format('woff2'),
+         url("../assets/fonts/BL-Melody/BLMelody-Regular.woff") format('woff'),
+         url("../assets/fonts/BL-Melody/BLMelody-Regular.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BL Melody";
+    src: url("../assets/fonts/BL-Melody/BLMelody-SemiBold.woff2") format('woff2'),
+        url("../assets/fonts/BL-Melody/BLMelody-SemiBold.woff") format('woff'),
+        url("../assets/fonts/BL-Melody/BLMelody-SemiBold.otf") format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BL Melody";
+    src: url("../assets/fonts/BL-Melody/BLMelody-Bold.woff2") format('woff2'),
+        url("../assets/fonts/BL-Melody/BLMelody-Bold.woff") format('woff'),
+        url("../assets/fonts/BL-Melody/BLMelody-Bold.otf") format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f6f7eb;
+    color: #1b2122;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    font-family: "BL Melody", sans-serif;
+    font-size: 1.1rem;
+    text-rendering: optimizeLegibility;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+canvas{
+    display: block;
+    margin: .5rem auto .5rem auto;
+}
+
+.main{
+    opacity: 0;
+    animation: main-fade-in 1s ease-in forwards;
+    -webkit-animation: main-fade-in 1s ease-in forwards;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h1.main-title{
+    font-size: 1.9rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+p{
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+.text-links{
+    text-decoration: none;
+    color: #1b2122;
+    font-weight: 600;
+    background: linear-gradient(currentColor 0 0) bottom /var(--d, 40%) 3px no-repeat;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.text-links:hover{
+    --d: 90%;
+    color: #1b2122;
+}
+
+.button-style{
+    text-decoration: none;
+    background-color: #1b2122;
+    color: #f6f7eb;
+    font-size: 1.2rem;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.button-style:hover{
+    background-color: #717769;
+    color: #f6f7eb;
+}
+
+.noAnimbutton-style{
+    text-decoration: none;
+    background-color: #1b2122;
+    color: #f6f7eb;
+    font-size: 1.2rem;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.noAnimbutton-style:hover {
+    background-color: #717769;
+    color: #f6f7eb;
+}
+
+@media (min-width: 576px){
+    h1, h1.main-title{
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 768px){
+    body{
+        font-size: 1.2rem;
+    }
+
+    p{
+        line-height: 30px;
+    }
+
+    h1, h1.main-title{
+        font-size: 4rem;
+    }
+
+    h2{
+        font-size: 3.5rem;
+    }
+
+    h3{
+        font-size: 2.6rem;
+    }
+}
+
+@media (min-width: 992px){
+    h1, h1.main-title{
+        font-size: 4.5rem;
+    }
+}
+
+@media (min-width: 1200px){
+    .button-style{
+        background-color: #f6f7eb;
+        color: #1b2122;
+    }
+
+    .button-style:hover{
+        background-color: #717769;
+        color: #f6f7eb;
+    }
+
+    .noAnimbutton-style {
+        background-color: #f6f7eb;
+        color: #1b2122;
+    }
+
+    .noAnimbutton-style:hover {
+        background-color: #717769;
+        color: #f6f7eb;
+    }
+}
+
+@keyframes main-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
