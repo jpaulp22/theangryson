@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img src="assets/logo.png" width="70" height="70" alt="Brand logo that leads to homepage">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span>
+                <img class="toggle-img" src="assets/toggler.svg" width="25" height="25">
+            </span>
+        </button>
+        <div class="collapse navbar-collapse pt-2" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="about">ABOUT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="miniMenu" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">PROJECTS</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="web-design">WEB DESIGN</a></li>
+                        <li><a class="dropdown-item" href="print-design">PRINT DESIGN</a></li>
+                        <li><a class="dropdown-item" href="photography">PHOTOGRAPHY</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="music">MUSIC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+    let htmlFile = location.pathname.split('/').slice(-1)[0];
+
+    $(".nav-link").each(function(){  
+        if($(this).attr('href').indexOf(htmlFile) !== -1){
+            $(this).addClass('active');
+        }
+    })
+
+    if(htmlFile == "photography" || htmlFile == "web-design" || htmlFile == "print-design"){
+        $("#miniMenu").addClass('active');
+    }
+
+    $(".navbar-toggler").on('click', function (e) {
+        if ($(".navbar-toggler").hasClass('clicked')) {
+            $(".navbar-toggler").removeClass('clicked')
+        }
+        else {
+            $(".navbar-toggler").addClass("clicked");
+        }
+    });
+
+    $(".navbar-brand, .nav-item a:not(#miniMenu)").on('click', function (e) {
+        e.preventDefault();
+        linkLocation = this.href;
+        $("body").addClass("animate__animated animate__fadeOut");
+        $("body").on('animationend webkitAnimationEnd', function (e) {
+            window.location = linkLocation;
+        });
+    })
+</script>
